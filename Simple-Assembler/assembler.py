@@ -99,6 +99,10 @@ def pass1():
                 error='k'
                 return
 
+            elif words[1] in opcode or words[1] in registers:
+                error='k'
+                return
+
             elif notvar==1: # if its 1, it means variable is defined in middle
                 error='g'
                 return
