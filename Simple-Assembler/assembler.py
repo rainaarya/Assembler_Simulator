@@ -152,13 +152,14 @@ def pass2():
         #line = commands[i]
         linenumber_pass2 += 1
 
-        if line == '':      # remove?
-            continue
-        
+                
         if flag == 1:
             linenumber_pass2 -= 1
             error = 'i'
             return
+
+        if line == '':   
+            continue
 
         words = line.split()
         #print(words)
@@ -242,7 +243,7 @@ def pass2():
                                 error = 'e'
                                 return
                         except:
-                            error = 'a' #---------- or k, need to check???
+                            error = 'k' #---------- or k, need to check???
                             return
                 else:
                     error = 'a'
@@ -359,7 +360,7 @@ def pass2():
                             error = 'e'
                             return
                     except:
-                        error = 'a' #---------- or k, need to check???
+                        error = 'k' #---------- or k, need to check???
                         return
                 else:
                     error = 'a'
@@ -387,7 +388,7 @@ def pass2():
                             error = 'e'
                             return
                     except:
-                        error = 'a' #---------- or k, need to check???
+                        error = 'k' #---------- or k, need to check???
                         return
                 else:
                     error = 'a'
@@ -502,7 +503,7 @@ def pass2():
                     error = 'c'
                     return
                 else:
-                    error = 'a'   #-------- or k?? check once
+                    error = 'k'   #-------- or k?? check once
                     return
 
             elif words[0] == 'jlt':     #jlt
@@ -525,7 +526,7 @@ def pass2():
                     error = 'c'
                     return
                 else:
-                    error = 'a'   #-------- or k?? check once
+                    error = 'k'   #-------- or k?? check once
                     return
             
             elif words[0] == 'jgt':     #jgt
@@ -548,7 +549,7 @@ def pass2():
                     error = 'c'
                     return
                 else:
-                    error = 'a'  #-------- or k?? check once
+                    error = 'k'  #-------- or k?? check once
                     return
 
             elif words[0] == 'je':      #je
@@ -571,7 +572,7 @@ def pass2():
                     error = 'c'
                     return
                 else:
-                    error = 'a'  #-------- or k?? check once
+                    error = 'k'  #-------- or k?? check once
                     return
 
             elif words[0] == 'hlt':     #hlt
