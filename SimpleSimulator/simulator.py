@@ -367,7 +367,7 @@ def execute(instruction):
         
         decimal_memory=int(instruction[8:],2)
         
-        if registers[7] == '0000000000000001': #check if greater than flag is set
+        if registers[7] == '0000000000000001': #check if equal to flag is set
             registers[7]='0000000000000000' # reset flags
             return False, decimal_memory  # pc = jump location
         else:
