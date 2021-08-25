@@ -112,7 +112,7 @@ def pass1():
         
 
         elif words[0][-1]==':':
-            if not(words[0][0:-1].replace('_', '').isalnum()):
+            if not(words[0][0:-1].replace('_', 'U').isalnum()):
                 error='k'
                 return
         
@@ -151,15 +151,16 @@ def pass2():
     for line in commands:
         #line = commands[i]
         linenumber_pass2 += 1
-
+        
+        if line == '':   
+            continue
                 
         if flag == 1:
             linenumber_pass2 -= 1
             error = 'i'
             return
 
-        if line == '':   
-            continue
+        
 
         words = line.split()
         #print(words)
